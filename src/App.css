@@ -1,0 +1,39 @@
+
+.App-header {
+  background-color: #282c34;
+  /* background-color: #264653; */
+  /* min-height: 100vh; */
+  color: white;
+}
+
+.header{
+    /* height: 10vh; */
+
+}
+
+.body
+{
+  /* background-color: red; */
+  /* scroll-snap-type:y mandatory; */
+  color: white;
+  /* height: 100vh; */
+  /* overflow-y: scroll; */
+}
+
+section
+{
+  
+  height: max-content;
+}
+
+.footer
+{
+  /* position: relative;
+  bottom: 0; */
+  width: 100%;
+  /* height: 5vh; */
+  background-color: red;
+  padding: 0 10rem;
+  color: white;
+  
+}
