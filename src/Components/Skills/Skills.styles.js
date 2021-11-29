@@ -4,8 +4,7 @@ export const SkillsContainer = styled.div`
   padding: 2rem 10rem;
   color: black;
   display: grid;
-  grid-template-columns: 
-
+  grid-template-columns: auto 1fr;
   border-bottom: 2px solid white;
 
   .title {
