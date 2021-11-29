@@ -32,7 +32,7 @@ jobs:
       - run: npm run build --if-present
       # - run: npm test
       - name: Push build file
-        uses: NegiAakash/NegiAakash.github.io@main
+        uses: NegiAakash/Portfolio@main
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
