@@ -32,6 +32,7 @@ jobs:
       - run: npm run build --if-present
       # - run: npm test
       - name: Push build file
+      - uses: actions/checkout@v2
         env:
           API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
