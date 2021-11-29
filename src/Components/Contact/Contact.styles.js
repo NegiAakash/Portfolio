@@ -5,23 +5,30 @@ export const Wrapper = styled.main`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   /* grid-column-gap: 10px; */
   padding: 2rem 10rem;
+
+  @media screen and (max-width: 700px) {
+    display: grid;
+    grid-template-row: repeat(auto-fit, minmax(1fr, 200px));
+    padding: 1rem 1rem;
+  }
 `;
 
 export const ContactWrapper = styled.main`
-  /* height: 0vh; */
   border: 1px solid white;
   width: 100%;
-  /* height: 85%; */
-  padding: 1rem 2rem;
+  padding: 4rem 2rem;
   margin: 1rem 0;
   background: var(--lightGrey);
   border-radius: 5px 0 0 5px;
   box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
     rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 700px) {
     width: 100%;
-    margin: 1rem 1rem;
+    margin: 0;
+
+    /* background: red; */
+    /* margin: 1rem 1rem; */
   }
 `;
 
@@ -40,6 +47,10 @@ export const ImageWrapper = styled.div`
 
   .image {
     width: 80%;
+  }
+
+  @media screen and (max-width: 1020px) {
+    display: none;
   }
 `;
 
