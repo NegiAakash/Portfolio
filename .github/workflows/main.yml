@@ -35,7 +35,7 @@ jobs:
           CI: false
       - run: ls
       - name: Copy to another repo
-        uses: NegiAakash/Portfolio@main
+        uses: actions/checkout@main
         with:
           personal_token: ${{ secrets.API_TOKEN_GITHUB }}
           src_path: build
