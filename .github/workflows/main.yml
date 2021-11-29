@@ -23,6 +23,7 @@ jobs:
         node-version: [14]
 
     steps:
+
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2
         name: Use Node.js 14
@@ -35,11 +36,13 @@ jobs:
           CI: false
       - run: ls
       - name: Copy to another repo
-        uses: actions/checkout@main
+        uses: actions/checkout@v2
+        env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
         with:
-          personal_token: ${{ secrets.API_TOKEN_GITHUB }}
-          src_path: build
-          dst_path: /.
-          dst_owner: NegiAakash
-          dst_repo_name: test-build
-          dst_branch: main
+          source_file: './build/'
+          destination_repo: 'NegiAakash/NegiAakash.github.io'
+          destination_folder: './'
+          user_email: 'aakash.negi011@gmail.com'
+          user_name: 'NegiAakash'
+          commit_message: 'Auto commit'
