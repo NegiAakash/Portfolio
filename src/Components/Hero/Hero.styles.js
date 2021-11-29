@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
+  background: linear-gradient(to bottom, #10121e, #2f334c, #9562af);
   height: 100vh;
   padding: 5rem 10rem;
   display: grid;

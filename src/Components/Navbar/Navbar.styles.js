@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const NavbarContainer = styled.div`
+  background: var(--darkBg);
   display: grid;
   grid-template-columns: 1fr auto;
   padding: 0 5rem;
@@ -13,7 +14,7 @@ export const NavbarContainer = styled.div`
     padding: 2rem 5rem;
   }
 
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1170px) {
     padding: 0 0;
     .ham-hidden {
       display: flex;
@@ -59,7 +60,7 @@ export const StyledMenu = styled.nav`
   }
 
   // For smaller screens
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1170px) {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -98,13 +99,13 @@ export const StyledMenu = styled.nav`
       }
     }
   }
-  @media (max-width: 768px) {
+  @media (max-width: 1170px) {
     width: 100%;
   }
 `;
 export const StyledBurger = styled.button`
   // For smaller screens
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 1170px) {
     position: fixed;
     top: 5%;
     left: 2rem;

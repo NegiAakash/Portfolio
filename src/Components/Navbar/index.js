@@ -7,12 +7,24 @@ export const NavComp = () => {
     <NavbarContainer>
       <span>Aakash Negi</span>
       <StyledMenu open={active}>
-        <a href="#home">Home</a>
-        <a href="#about">About me</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#resume">Resume</a>
-        <a href="#contact">Contact me</a>
+        <a href="#home" onCLick={() => setActive(false)}>
+          Home
+        </a>
+        <a href="#about" onCLick={() => setActive(false)}>
+          About me
+        </a>
+        <a href="#skills" onCLick={() => setActive(false)}>
+          Skills
+        </a>
+        <a href="#projects" onCLick={() => setActive(false)}>
+          Projects
+        </a>
+        <a href="#resume" onCLick={() => setActive(false)}>
+          Resume
+        </a>
+        <a href="#contact" onCLick={() => setActive(false)}>
+          Contact me
+        </a>
       </StyledMenu>
       <StyledBurger
         className="ham-hidden"

@@ -8,13 +8,11 @@ export const GlobalStyle = createGlobalStyle`
 
         --orange:#F4743B;
         --white: #fff;
-        --navBg:#3C6E71;
-        --lightGrey: #eee;
-        --medGrey:#353535;
-        --darkGrey:#1c1c1c;
-        --lightYellow: #FFC15E;
-        --blue1:#ACACDE;
-        --blue2:#4E5166;
+
+        --darkBg:#10121e;
+        --lightGrey: #2f334c;
+        --lightPurple: #9562af;
+        --lightTomato:#fa4a56;
         --bg:#5C9EAD;
 
         /* font sizes */

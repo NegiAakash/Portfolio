@@ -14,8 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && copy .\\build\\* D:\\GitHubPages\\NegiAakash.github.io",
-    "commit": "cd D:\\GitHubPages\\NegiAakash.github.io\\ && git add . && git commit -m 'Added react build files' && git branch -M main && git push -u origin main "
+    "build": "react-scripts build && xcopy .\\build D:\\GitHubPages\\NegiAakash.github.io /s /e /y"
   },
   "eslintConfig": {
     "extends": [
