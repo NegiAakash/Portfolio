@@ -6,7 +6,7 @@ export const ResumeContainer = styled.div`
   color: black;
   display: grid;
   grid-template-columns: auto 1fr;
-  border-bottom: 2px solid white;
+  background: linear-gradient(to bottom, var(--darkBg), var(--lightPurple));
 
   .title {
     /* background-color: red; 0*/

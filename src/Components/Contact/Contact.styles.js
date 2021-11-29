@@ -5,6 +5,7 @@ export const Wrapper = styled.main`
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   /* grid-column-gap: 10px; */
   padding: 2rem 10rem;
+  background: linear-gradient(to bottom, var(--lightPurple), var(--darkBg));
 
   @media screen and (max-width: 700px) {
     display: grid;

@@ -1,13 +1,19 @@
 import styled from "styled-components";
 
-export const AboutContainer = styled.div`
+export const AboutContainer = styled.section`
   /* height: 100vh; */
   /* background: teal; */
   padding: 2rem 10rem;
   color: black;
   display: grid;
   grid-template-columns: auto 1fr;
-  border-bottom: 2px solid white;
+  background: linear-gradient(
+    to bottom,
+    var(--lightPurple),
+    var(--lightTomato)
+  );
+
+  /* border-bottom: 2px solid white; */
 
   .title {
     /* background-color: red; 0*/

@@ -7,7 +7,7 @@ export const HeroContainer = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   overflow: hidden;
-  border-bottom: 2px solid white;
+  /* border-bottom: 2px solid white; */
   .hero-image-container {
     width: 100vh;
     .hero-image {
