@@ -42,6 +42,7 @@ export const StyledMenu = styled.nav`
   align-items: center;
   font-size: 1.2rem;
   width: 50vw;
+
   a {
     width: 100%;
     height: 100%;
@@ -50,11 +51,9 @@ export const StyledMenu = styled.nav`
     align-items: center;
     :hover {
       color: #f7f7f7;
-
       border-top: 5px solid var(--orange);
       color: var(--orange);
-      /* background: white;
-      color: black; */
+
       transition: ease 0.1s;
     }
   }
@@ -63,13 +62,14 @@ export const StyledMenu = styled.nav`
   @media screen and (max-width: 1170px) {
     display: flex;
     flex-direction: column;
+
     justify-content: center;
     background: var(--orange);
     transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
     width: 50vw;
     height: 100vh;
     text-align: left;
-    padding: 2rem 0;
+    padding: 1rem 0;
     position: fixed;
     top: 0;
     left: 0;
@@ -77,9 +77,9 @@ export const StyledMenu = styled.nav`
     z-index: 10;
 
     a {
-      font-size: 2rem;
+      font-size: 1.5rem;
       text-transform: uppercase;
-      padding: 2rem 0;
+      padding: 5px 0;
       font-weight: bold;
       letter-spacing: 0.5rem;
       color: white;
@@ -106,13 +106,15 @@ export const StyledMenu = styled.nav`
 export const StyledBurger = styled.button`
   // For smaller screens
   @media screen and (max-width: 1170px) {
-    position: fixed;
+    position: absolute;
     top: 5%;
     left: 2rem;
+
+    /* padding: 1rem 2rem; */
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    width: 2rem;
+    width: 80%;
     height: 2rem;
     background: transparent;
     border: none;

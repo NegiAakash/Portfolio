@@ -15,7 +15,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build1": "react-scripts build && xcopy .\\build D:\\GitHubPages\\NegiAakash.github.io /s /e /y"
+    "build1": "react-scripts build && cp -r ./build/ ~/Projects/PortfolioGit/"
   },
   "eslintConfig": {
     "extends": [

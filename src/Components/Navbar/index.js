@@ -6,6 +6,7 @@ export const NavComp = () => {
   return (
     <NavbarContainer>
       <span>Aakash Negi</span>
+
       <StyledMenu open={active}>
         <a href="#home" onClick={() => setActive(false)}>
           Home
