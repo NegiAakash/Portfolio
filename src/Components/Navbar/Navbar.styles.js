@@ -1,139 +1,61 @@
 import styled from "styled-components";
 
-export const NavbarContainer = styled.div`
-  background: var(--darkBg);
-  display: grid;
-  grid-template-columns: 1fr auto;
-  padding: 0 5rem;
-  .ham-hidden {
-    display: none;
-  }
-  span {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 2rem 5rem;
-  }
-
-  @media screen and (max-width: 1170px) {
-    padding: 0 0;
-    .ham-hidden {
-      display: flex;
-    }
-    span {
-      display: flex;
-      align-items: flex-end;
-      position: absolute;
-      top: 5%;
-      right: 0;
-      /* background: red; */
-      width: 80vw;
-      height: auto;
-      padding: 0 3rem;
-      font-size: 2rem;
-      font-weight: 800;
-      z-index: 1;
-      /* justify-content: ; */
-    }
-  }
-`;
-export const StyledMenu = styled.nav`
+export const NavbarContainer = styled.nav`
+  /* height: 5vh; */
+  background: var(--bg);
+  color: var(--text);
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  font-size: 1.2rem;
-  width: 50vw;
+  flex-direction: row;
 
-  a {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    :hover {
-      color: #f7f7f7;
-      border-top: 5px solid var(--orange);
-      color: var(--orange);
-
-      transition: ease 0.1s;
-    }
-  }
-
-  // For smaller screens
-  @media screen and (max-width: 1170px) {
-    display: flex;
-    flex-direction: column;
-
-    justify-content: center;
-    background: var(--orange);
-    transform: ${({ open }) => (open ? "translateX(0)" : "translateX(-100%)")};
-    width: 50vw;
-    height: 100vh;
-    text-align: left;
-    padding: 1rem 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    transition: transform 0.3s ease-in-out;
-    z-index: 10;
-
-    a {
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      padding: 5px 0;
-      font-weight: bold;
-      letter-spacing: 0.5rem;
-      color: white;
-      text-decoration: none;
-      transition: color 0.3s linear;
-      /* border: 1px white solid; */
-      width: 100%;
-      @media (max-width: 768px) {
-        font-size: 1.5rem;
-        text-align: center;
-      }
-
-      :hover {
-        color: #343078;
-        background: white;
-        color: black;
-      }
-    }
-  }
-  @media (max-width: 1170px) {
-    width: 100%;
-  }
-`;
-export const StyledBurger = styled.button`
-  // For smaller screens
-  @media screen and (max-width: 1170px) {
-    position: absolute;
-    top: 5%;
-    left: 2rem;
-
-    /* padding: 1rem 2rem; */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: 80%;
+  .theme-slider {
+    background: ${({ dark }) => (dark ? "var(--s-bg)" : "var(--color1)")};
+    margin-left: auto;
+    width: 4rem;
     height: 2rem;
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    padding: 0;
-    z-index: 10;
+    border-radius: 2rem;
+    margin-top: 1rem;
+    display: flex;
+    transition: background 0.5s ease-in;
 
-    &:focus {
-      outline: none;
+    align-items: center;
+
+    .button {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      /* margin: 0 0.1rem; */
+      transition: all 0.5s ease-in;
+      margin-left: ${({ dark }) => (dark ? "40%" : "0")};
+      background: ${({ dark }) => (dark ? "var(--color1)" : "var(--s-bg)")};
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        width: 1.5rem;
+      }
     }
+  }
 
-    div {
-      width: 2rem;
-      height: 0.25rem;
-      background: ${({ open }) => (open ? "white" : "#EFFFFA")};
-      border-radius: 10px;
-      transition: all 0.3s linear;
-      position: relative;
-      transform-origin: 1px;
+  .ham {
+    position: ${({ open }) => (open ? "fixed" : "relative")};
+    right: ${({ open }) => (open ? "0" : "0")};
+
+    margin-left: auto;
+    margin-right: 0.5rem;
+    padding: 1rem 0.5rem;
+    cursor: pointer;
+    z-index: 3;
+
+    .line {
+      /* display: ${({ open }) => (open ? "none" : "block")}; */
+      background: white;
+      width: 30px;
+      height: 3px;
+      margin: 5px;
+      border-radius: 5px;
+      transform-origin: 4px;
+      transition: all 1s ease-in-out;
 
       :first-child {
         transform: ${({ open }) => (open ? "rotate(45deg)" : "rotate(0)")};
@@ -149,5 +71,89 @@ export const StyledBurger = styled.button`
         transform: ${({ open }) => (open ? "rotate(-45deg)" : "rotate(0)")};
       }
     }
+
+    :hover {
+      .line {
+        background: var(--highlight);
+      }
+    }
   }
+`;
+
+export const NavbarList = styled.ul`
+  display: flex;
+  list-style: none;
+  margin: 0;
+  width: 50%;
+  padding: 1rem;
+  justify-content: center;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: 2rem;
+  pointer-events: none;
+  pointer-events: all;
+  position: fixed;
+  background: var(--s-bg);
+
+  height: 100vh;
+  width: 100%;
+  flex-direction: column;
+  z-index: 2;
+  transition: 1s ease-out;
+
+  clip-path: circle(${({ open }) => (open ? "150vw" : "0px")} at 100% 0%);
+  -webkit-clip-path: circle(
+    ${({ open }) => (open ? "150vw" : "0px")} at 100% 0%
+  );
+
+  @media screen and (max-width: 768px) {
+    clip-path: circle(${({ open }) => (open ? "1200px" : "0px")} at 100% 0%);
+    -webkit-clip-path: circle(
+      ${({ open }) => (open ? "1200px" : "0px")} at 100% 0%
+    );
+  }
+  @media screen and (max-width: 768px) {
+    padding: 1rem;
+  }
+`;
+
+export const NavbarItem = styled.li`
+  /* background: blue; */
+  /* padding: 1rem 5rem; */
+  width: 20rem;
+  height: 5rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--text);
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  text-transform: capitalize;
+  letter-spacing: 0.2rem;
+
+  :not(:first-child) {
+    margin-top: 1rem;
+  }
+  :hover {
+    color: var(--highlight);
+    /* border-bottom: 2px solid var(--highlight); */
+  }
+`;
+
+export const NavbarLink = styled.a`
+  text-decoration: none;
+  /* font-size: 1rem; */
+  /* cursor: pointer; */
+`;
+
+export const NavbarLogo = styled.strong`
+  /* background: blue; */
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text);
+  padding: 0.5rem;
+  margin-left: 1rem;
+  padding: 1rem;
 `;

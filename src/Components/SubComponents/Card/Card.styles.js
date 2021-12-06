@@ -73,7 +73,7 @@ export const TechIconsContainer = styled.div`
     border-radius: 50%;
 
     :hover {
-      background: var(--orange);
+      background: var(--highlight);
     }
   }
 `;

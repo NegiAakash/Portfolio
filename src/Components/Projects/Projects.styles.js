@@ -8,8 +8,6 @@ export const ProjectsContainer = styled.div`
   flex-direction: column;
   /* border: 1px solid white; */
 
-  background: linear-gradient(to bottom, var(--lightGrey), var(--darkBg));
-
   .cardContainer {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

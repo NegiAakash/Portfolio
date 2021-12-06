@@ -6,16 +6,27 @@ export const GlobalStyle = createGlobalStyle`
         --maxWidth:1280px;
         /* Backgrouds */
 
-        --orange:#F4743B;
-        --white: #fff;
+        --highlight:#e76f51;
+        /* /SECTION - Dark color scheme */
+        --dark-primary-bg:#2B3848;
+        --dark-secondary-bg:#006d77;
+        --dark-text-color:#F9FAF8;
+        --dark-color1:#9a8c98;
+        --dark-color2:#c9ada7;
+        /* /SECTION - Dark color end */
 
-        --darkBg:#10121e;
-        --lightGrey: #2f334c;
-        --lightPurple: #9562af;
-        --lightTomato:#fa4a56;
-        --bg:#5C9EAD;
+        /* SECTION - Light color scheme */
+        
+        --light-primary-bg:#98c1d9;
+        --light-secondary-bg:#e76f51;
+        --light-text-color:#14213d;
+        --light-color1:#9a8c98;
+        --light-color2:#c9ada7;
+        /* /SECTION - Light color end */
+
 
         /* font sizes */
+        --fontHero: 4rem;
         --fontMax:2.5rem;
         --fontBig:1.5rem;
         --fontMed:1.2rem;
@@ -25,6 +36,9 @@ export const GlobalStyle = createGlobalStyle`
         --success: #4BB543;
         --failure: #FC100D;
     }
+
+    
+
 
     *{
         /* visibility: ; */

@@ -7,16 +7,11 @@ export const AboutContainer = styled.section`
   color: black;
   display: grid;
   grid-template-columns: auto 1fr;
-  background: linear-gradient(
-    to bottom,
-    var(--lightPurple),
-    var(--lightTomato)
-  );
 
   /* border-bottom: 2px solid white; */
 
   .title {
-    /* background-color: red; 0*/
+    background-color: red;
     padding: 1rem 2rem;
     display: flex;
     align-items: center;

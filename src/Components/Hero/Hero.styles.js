@@ -1,12 +1,13 @@
 import styled from "styled-components";
 
 export const HeroContainer = styled.div`
-  background: linear-gradient(to bottom, #10121e, #2f334c, #9562af);
   height: 100vh;
   padding: 5rem 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   overflow: hidden;
+  background: var(--bg);
+  color: var(--text);
   /* border-bottom: 2px solid white; */
   .hero-image-container {
     width: 100vh;
@@ -15,9 +16,9 @@ export const HeroContainer = styled.div`
     }
   }
   p {
-    font-size: 4rem;
+    font-size: var(--fontHero);
     span {
-      color: var(--orange);
+      color: var(--highlight);
     }
   }
 
@@ -42,7 +43,7 @@ export const HeroContainer = styled.div`
     p {
       font-size: 3rem;
       span {
-        color: var(--orange);
+        color: var(--highlight);
       }
     }
   }

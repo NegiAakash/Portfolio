@@ -5,7 +5,6 @@ export const SkillsContainer = styled.div`
   color: black;
   display: grid;
   grid-template-columns: auto 1fr;
-  background: linear-gradient(to bottom, var(--lightTomato), var(--lightGrey));
 
   .title {
     /* background-color: red; 0*/

@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import About from "./Components/About";
 import Contacts from "./Components/Contact";
@@ -10,12 +11,13 @@ import Skills from "./Components/Skills";
 import { GlobalStyle } from "./Global.styles";
 
 function App() {
+  const [darkMode, setDarkMode] = useState(false);
   return (
     <div className="App">
       <GlobalStyle />
-      <header className="App-header">
+      <header className={`${darkMode ? "dark" : "light"} transition`}>
         <div className="header">
-          <NavComp />
+          <NavComp darkMode={darkMode} setDarkMode={setDarkMode} />
         </div>
         <div className="socials"></div>
         <div className="body">

@@ -1,25 +1,28 @@
 
-.App-header {
 
-  /* background-color: #264653; */
-  /* min-height: 100vh; */
-  color: white;
+
+
+.dark{
+  --bg: var(--dark-primary-bg);
+  --s-bg: var(--dark-secondary-bg);
+  --text: var(--dark-text-color);
+  --color1: var(--dark-color1);
+  --color2: var(--dark-color2);
 }
 
-.header{
-    /* height: 10vh; */
-
+.light{
+  --bg: var(--light-primary-bg);
+  --s-bg: var(--light-secondary-bg);
+  --text: var(--light-text-color);
+  --color1: var(--light-color1);
+  --color2: var(--light-color2);
+  --highlight: #2a9d8f
 }
-
-.body
-{
-  /* background-color: red; */
-  /* scroll-snap-type:y mandatory; */
-  color: white;
-  /* height: 100vh; */
-  /* overflow-y: scroll; */
+.body{
+  transition: background 1s ease;
+  background: var(--bg);
+  color: var(--text);
 }
-
 section
 {
   
