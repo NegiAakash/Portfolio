@@ -65,8 +65,24 @@ export const TechIconsContainer = styled.div`
   background: var(--lightGre);
 
   .icon {
-    width: 2rem;
-    height: 2rem;
+    width: 3rem;
+    height: 3rem;
+    padding: 0.5rem;
     margin: 0.5rem;
+    background: white;
+    border-radius: 50%;
+
+    :hover {
+      background: var(--orange);
+    }
   }
 `;
+
+export const CardImage = styled.img`
+  width: 100%;
+  height: 20rem;
+  object-fit: cover;
+  border-radius: 0.5rem;
+`;
+
+export const Wrapper = styled.div``;
